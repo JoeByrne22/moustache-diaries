@@ -1,0 +1,17 @@
+<h1 class="title">All the moustaches...</h1>
+<div ng-if="isAuthenticated()">
+  <p>Welcome back {{ username }}</p>
+</div>
+<form class="searchbar" ng-submit="handleFilterSubmit()">
+    <input type="text" class="input" ng-model="searchTerm">
+    <button class="button is-info">🔎</button>
+  </form>
+  <hr>
+<div class="columns is-multiline">
+  <div ng-repeat="moustache in filteredMoustaches" class="column is-4">
+    <a ui-sref="moustachesShow({ id: moustache._id })">
+      <img class="showImage" ng-src="{{ moustache.image }}">
+      <p class="indexTitle subtitle is-3">{{ moustache.name }}</p>
+    </a>
+  </div>
+</div>

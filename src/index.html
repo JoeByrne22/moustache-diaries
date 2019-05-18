@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app='MoustacheTime'>
+<head>
+  <meta charset="utf-8">
+  <title>The Moustache Diaries</title>
+</head>
+<body ng-controller="mainCtrl">
+  <nav class="columns navbar">
+      <nav class= "column is-4"><a ui-sref="home"><h1>Home</h1></a></nav>
+      <nav class= "column is-2"><a ui-sref="moustacheIndex">All the moustaches</a></nav>
+      <nav class= "column is-2"><a ng-if="isAuthenticated()" ui-sref="moustachesNew">Add a new Moustache</a></nav>
+      <nav class= "column is-2"><a ng-if="!isAuthenticated()" class="navbar-item" ui-sref="login">Log in</a></nav>
+      <nav class= "column is-2"><a ng-if="isAuthenticated()" class="navbar-item" ng-click="handleLogout()">Log out {{ username }}</a></nav>
+  </nav>
+  <div ui-view></div>
+</div>
+</body>
+</html>

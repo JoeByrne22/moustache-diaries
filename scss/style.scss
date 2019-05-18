@@ -1,0 +1,47 @@
+nav {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+nav.a {
+}
+
+img {
+ margin-left: 10px;
+ margin-right: 10px;
+ width: 90%;
+}
+
+p.indexTitle {
+  margin-left: 10px;
+}
+
+h1.title {
+  // margin-left: 10px;
+  // margin-top: 7px;
+}
+
+.newForm  {
+  display: flex;
+}
+
+.showImage {
+  width: 50%;
+
+}
+
+.showImage:hover {
+  opacity: 0.5;
+  transition: opacity .5s;
+}
+
+.searchbar {
+  display: flex;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.button {
+  margin-left: 20px;
+}
